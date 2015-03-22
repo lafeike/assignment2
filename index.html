@@ -1,0 +1,15 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Starting Angular</title>
+    <link href="./styles/main.css" rel="stylesheet" />
+</head>
+<body ng-app='myApp'  ng-controller="AppCtrl">
+        <h3 ng-bind="title"></h3>
+        <my-inputs ng-model="md"></my-inputs >
+        <div ng-view></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

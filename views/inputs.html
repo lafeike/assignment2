@@ -1,0 +1,38 @@
+<form name="login" class="login">
+    <div class="line">
+        <label>Name: </label>
+        <input name="name" ng-model="userName" type="text"
+                     ng-required="!userName">
+
+        <div class="msg-block" ng-if="login.name.$touched" >
+            <span ng-show="login.name.$error.required">The Name Field is Required!</span>
+        </div>
+    </div><br class="clear" /><br/>
+    <div class="line">
+        <label>Password:</label>
+        <input name="psw1" type="password"
+                        ng-model="userPassword"
+                        ng-required="!userPassword"
+                        ng-minlength="8"
+                        ng-maxlength="20">
+        <div class="msg-block" ng-if="login.psw1.$touched">
+            <span ng-show="login.psw1.$error.required">Password required!</span>
+            <span ng-show="login.psw1.$error.maxlength">More than 20 characters not permitted for password!</span>
+            <span ng-show="login.psw1.$error.minlength">Less than 8 characters not permitted for password!</span>
+        </div>
+    </div><div class="clear"></div><br/>
+    <div class="line">
+        <label>Password verify:</label>
+        <input name="psw2" type="password"
+                               ng-model="userPassword2" equals="{{userPassword}}">
+        <div class="msg-block" ng-if="userPassword != userPassword2 && login.psw2.$touched">
+            <span >The verify password does not match the original one!</span>
+        </div>
+    </div>
+    <div class="clear"></div><br/>
+    <input name="buttonSubmit" ng-click="inputSubmit()"
+           ng-disabled="login.$invalid || userPassword!=userPassword2"
+           type="button" value="Submit">
+    <div ng-include="pathToTheViewOnServer"></div><br />
+</form>
+

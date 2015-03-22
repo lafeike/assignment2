@@ -1,0 +1,37 @@
+p {
+    color: #355199;
+}
+.msg-block {
+    margin-right: 145px;
+    color:maroon;
+    display: inline-block;
+    float:left;
+}
+label{
+float:left;
+    width: 12%;
+    padding-left: 50px;
+}
+.line{
+    display: block;
+    padding-left: 20px;
+    font-weight: bold;
+}
+.line input{
+float:left;
+    width: 20%;
+}
+.clear{
+    clear: both;
+}
+
+input[type="button"]{
+    margin-left: 16%;
+}
+
+.login span
+{
+    color: red;
+}
+
+.line input.ng-invalid.ng-touched { background-color: #FA787E; }
